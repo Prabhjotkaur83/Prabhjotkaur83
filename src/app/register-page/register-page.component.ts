@@ -14,7 +14,7 @@ export class RegisterPageComponent implements OnInit {
   
   constructor(private router: Router,private toastr: ToastrService,private spinner: NgxSpinnerService){}
   registerform=new FormGroup({
-    'name': new FormControl('',[Validators.required]),
+    'name': new FormControl('',[Validators.required,Validators.minLength(2)]),
     'email': new FormControl('',[Validators.required,Validators.email]),
     'contact': new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
     'password': new FormControl('',[Validators.required,Validators.minLength(5)])

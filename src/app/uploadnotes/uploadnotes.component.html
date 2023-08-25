@@ -43,7 +43,7 @@
    <label for="formGroupExampleInput2">Price</label>
     <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Softcopy Price Only Maximum value 9999" formControlName="price"> <br>
     <p class="text-danger" *ngIf="this.uploadnotesform.get('price')?.invalid && (uploadnotesform.get('price')?.touched || uploadnotesform.get('price')?.dirty )">Enter correct amount</p>
-    <button class="btn btn-primary" routerLink="/layout/uploaderprofile">Next Step</button>
+    <button class="btn btn-primary" routerLink="/layout/uploaderprofile" [disabled]="this.uploadnotesform.invalid">Next Step</button>
     
 
     

@@ -21,11 +21,11 @@
             
               <label for="formGroupExampleInput2">Email:</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="email" formControlName="email">
-              <p class="text-danger" *ngIf="this.registerform.get('email')?.invalid && (registerform.get('email')?.touched || registerform.get('email')?.dirty )">This field is required</p>
+              <p class="text-danger" *ngIf="this.registerform.get('email')?.invalid && (registerform.get('email')?.touched || registerform.get('email')?.dirty )">A correct Email address is required</p>
           
                 <label for="formGroupExampleInput2">Contact Number:</label>
                 <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="contact" formControlName="contact">
-                <p class="text-danger" *ngIf="this.registerform.get('contact')?.invalid && (registerform.get('contact')?.touched || registerform.get('contact')?.dirty )">This field is required</p>
+                <p class="text-danger" *ngIf="this.registerform.get('contact')?.invalid && (registerform.get('contact')?.touched || registerform.get('contact')?.dirty )">A correct contact number is required without country code</p>
             
                 <label for="formGroupExampleInput2">Password:</label>
                 <input type="password" class="form-control" id="formGroupExampleInput2" class="form-control" name="password" formControlName="password">
