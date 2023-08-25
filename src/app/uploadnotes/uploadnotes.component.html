@@ -1,0 +1,52 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://i.pinimg.com/originals/ed/b8/b3/edb8b3da20cdc65f496b6b4dc3fe463d.gif' />">
+  <p style="color: white" > Loading... </p>
+
+</ngx-spinner>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+              
+               
+<h3 class="d-flex justify-content-center">Add your work</h3>
+<form class="form-group" [formGroup]="uploadnotesform">
+  <label for="formGroupExampleInput">Add Attachment: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput" formControlName="file"> <br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('file')?.invalid && (uploadnotesform.get('file')?.touched || uploadnotesform.get('file')?.dirty )">This field is required</p>
+  <label for="formGroupExampleInput2">Cover for hardcopy: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="cover"><br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('cover')?.invalid && (uploadnotesform.get('cover')?.touched || uploadnotesform.get('cover')?.dirty )">This field is required</p>
+
+  <label for="formGroupExampleInput2">Sample Image 1: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="image1"><br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('image1')?.invalid && (uploadnotesform.get('image1')?.touched || uploadnotesform.get('image1')?.dirty )">This field is required</p>
+
+  <label for="formGroupExampleInput2">Sample Image 2: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="image2"><br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('image2')?.invalid && (uploadnotesform.get('image2')?.touched || uploadnotesform.get('image2')?.dirty )">This field is required</p>
+
+  <label for="formGroupExampleInput2">Sample Image 3: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="image3"><br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('image3')?.invalid && (uploadnotesform.get('image3')?.touched || uploadnotesform.get('image3')?.dirty )">This field is required</p>
+
+  <label for="formGroupExampleInput2">Title: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="title"><br>
+  <p class="text-danger" *ngIf="this.uploadnotesform.get('title')?.invalid && (uploadnotesform.get('title')?.touched || uploadnotesform.get('title')?.dirty )">Required (Maximum character length is 50)</p>
+  <label for="formGroupExampleInput2">Description: </label>
+  
+   <textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="600" placeholder="maximum length is 600 words including spaces" formControlName="description"></textarea> <br>
+   <p class="text-danger" *ngIf="this.uploadnotesform.get('description')?.invalid && (uploadnotesform.get('description')?.touched || uploadnotesform.get('description')?.dirty )">This field is required</p>
+   <label for="formGroupExampleInput2">Price</label>
+    <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Softcopy Price Only Maximum value 9999" formControlName="price"> <br>
+    <p class="text-danger" *ngIf="this.uploadnotesform.get('price')?.invalid && (uploadnotesform.get('price')?.touched || uploadnotesform.get('price')?.dirty )">Enter correct amount</p>
+    <button class="btn btn-primary" routerLink="/layout/uploaderprofile">Next Step</button>
+    
+
+    
+</form>
+</div>
+</div>

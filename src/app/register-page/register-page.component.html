@@ -1,0 +1,53 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://i.pinimg.com/originals/ed/b8/b3/edb8b3da20cdc65f496b6b4dc3fe463d.gif' />"> <br><br><br><br><br>
+  <p style="color: white" > Loading... </p>
+
+</ngx-spinner>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+        <form [formGroup]="registerform" class="form-group">
+            
+              <label for="formGroupExampleInput">Full name:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" class="form-control" name="name" formControlName="name">
+              <p class="text-danger" *ngIf="this.registerform.get('name')?.invalid && (registerform.get('name')?.touched || registerform.get('name')?.dirty )">This field is required</p>
+ 
+            
+            
+              <label for="formGroupExampleInput2">Email:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="email" formControlName="email">
+              <p class="text-danger" *ngIf="this.registerform.get('email')?.invalid && (registerform.get('email')?.touched || registerform.get('email')?.dirty )">This field is required</p>
+          
+                <label for="formGroupExampleInput2">Contact Number:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="contact" formControlName="contact">
+                <p class="text-danger" *ngIf="this.registerform.get('contact')?.invalid && (registerform.get('contact')?.touched || registerform.get('contact')?.dirty )">This field is required</p>
+            
+                <label for="formGroupExampleInput2">Password:</label>
+                <input type="password" class="form-control" id="formGroupExampleInput2" class="form-control" name="password" formControlName="password">
+                <p class="text-danger" *ngIf="this.registerform.get('password')?.invalid && (registerform.get('password')?.touched || registerform.get('password')?.dirty )">Minimum 5 charcters are required</p>
+              <label for="formGroupExampleInput2">Select your gender:</label> <br>
+              <div class="custom-control custom-radio custom-control-inline form-group">
+            
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                <label class="custom-control-label" for="customRadioInline1">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Female</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+        
+                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline3">Other</label>
+              </div> <br> <br>
+            <button class="btn btn-primary" [disabled]="this.registerform.invalid" (click)="register()">Register</button><br>
+            <span>Already Registered?</span><a routerLink="/layout/login">Login</a>
+          </form>
+</div>
+</div>
+</div>

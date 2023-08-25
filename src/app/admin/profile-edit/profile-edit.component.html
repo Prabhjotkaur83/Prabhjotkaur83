@@ -1,0 +1,75 @@
+<!-- <ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://i.pinimg.com/originals/ed/b8/b3/edb8b3da20cdc65f496b6b4dc3fe463d.gif' />">
+  <p style="color: white" > Loading... </p>
+
+</ngx-spinner> -->
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+              
+               
+
+<form class="form-group" [formGroup]="editform">
+  <label for="formGroupExampleInput">Full Name: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput" formControlName="name"> <br>
+  <p class="text-danger" *ngIf="this.editform.get('name')?.invalid && (editform.get('name')?.touched || editform.get('name')?.dirty )">This field is required</p>
+  
+  <label for="formGroupExampleInput">Your Profile Picture: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput" formControlName="photo"> <br>
+  <p class="text-danger" *ngIf="this.editform.get('photo')?.invalid && (editform.get('photo')?.touched || editform.get('photo')?.dirty )">This field is required</p> 
+
+  <label for="formGroupExampleInput2">Education: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="education"><br>
+  <p class="text-danger" *ngIf="this.editform.get('education')?.invalid && (editform.get('education')?.touched || editform.get('education')?.dirty )">This field is required</p>
+  
+  <label for="formGroupExampleInput2">Institute: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="institute"><br>
+  <p class="text-danger" *ngIf="this.editform.get('institute')?.invalid && (editform.get('institute')?.touched || editform.get('institute')?.dirty )">Enter Valid Institute</p>
+  
+  <label for="formGroupExampleInput2">Describe Yourself: </label>
+   <textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="600" placeholder="maximum length is 600 words including spaces" formControlName="description"></textarea> <br>
+   <p class="text-danger" *ngIf="this.editform.get('description')?.invalid && (editform.get('description')?.touched || editform.get('description')?.dirty )">This field is required</p>
+   
+   <label for="formGroupExampleInput2">Specialization:</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2"> <br>
+    
+    
+    <label for="formGroupExampleInput2">Any Identification(Adhaar Card/DL/Passport):</label>
+    <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="identification"> <br>
+    <p class="text-danger" *ngIf="this.editform.get('identification')?.invalid && (editform.get('identification')?.touched || editform.get('identification')?.dirty )">This field is required</p>
+    
+    <label for="formGroupExampleInput2">Email:</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="email" formControlName="email">
+              <p class="text-danger" *ngIf="this.editform.get('email')?.invalid && (editform.get('email')?.touched || editform.get('email')?.dirty )">This field is required</p>
+          
+                <label for="formGroupExampleInput2">Contact Number:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" class="form-control" name="contact" formControlName="contact">
+                <p class="text-danger" *ngIf="this.editform.get('contact')?.invalid && (editform.get('contact')?.touched || editform.get('contact')?.dirty )">This field is required</p>
+            
+                <label for="formGroupExampleInput2">Password:</label>
+                <input type="password" class="form-control" id="formGroupExampleInput2" class="form-control" name="password" formControlName="password">
+                <p class="text-danger" *ngIf="this.editform.get('password')?.invalid && (editform.get('password')?.touched || editform.get('password')?.dirty )">Minimum 5 charcters are required</p>
+              <label for="formGroupExampleInput2">Select your gender:</label> <br>
+              <div class="custom-control custom-radio custom-control-inline form-group">
+            
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+                <label class="custom-control-label" for="customRadioInline1">Male</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Female</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+        
+                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline3">Other</label>
+              </div> <br> <br>
+    <button class="btn btn-primary" routerLink="/layout/uploaderprofile">Update Your Profile</button>
+    
+</form>
+</div>
+</div>

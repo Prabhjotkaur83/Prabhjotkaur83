@@ -1,0 +1,50 @@
+<!-- <ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://i.pinimg.com/originals/ed/b8/b3/edb8b3da20cdc65f496b6b4dc3fe463d.gif' />">
+  <p style="color: white" > Loading... </p>
+
+</ngx-spinner> -->
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+              
+               
+      <h3 style="text-align: center;">Complete your profile</h3>
+<form class="form-group" [formGroup]="uploaderform">
+  <label for="formGroupExampleInput">Full Name: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput" formControlName="name"> <br>
+  <p class="text-danger" *ngIf="this.uploaderform.get('name')?.invalid && (uploaderform.get('name')?.touched || uploaderform.get('name')?.dirty )">This field is required</p>
+  
+  <label for="formGroupExampleInput">Your Profile Picture: </label>
+  <input type="file" class="form-control" id="formGroupExampleInput" formControlName="photo"> <br>
+  <p class="text-danger" *ngIf="this.uploaderform.get('photo')?.invalid && (uploaderform.get('photo')?.touched || uploaderform.get('photo')?.dirty )">This field is required</p> 
+
+  <label for="formGroupExampleInput2">Education: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="education"><br>
+  <p class="text-danger" *ngIf="this.uploaderform.get('education')?.invalid && (uploaderform.get('education')?.touched || uploaderform.get('education')?.dirty )">This field is required</p>
+  
+  <label for="formGroupExampleInput2">Institute: </label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="institute"><br>
+  <p class="text-danger" *ngIf="this.uploaderform.get('institute')?.invalid && (uploaderform.get('institute')?.touched || uploaderform.get('institute')?.dirty )">Enter Valid Institute</p>
+  
+  <label for="formGroupExampleInput2">Describe Yourself: </label>
+   <textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="600" placeholder="maximum length is 600 words including spaces" formControlName="description"></textarea> <br>
+   <p class="text-danger" *ngIf="this.uploaderform.get('description')?.invalid && (uploaderform.get('description')?.touched || uploaderform.get('description')?.dirty )">This field is required</p>
+   
+   <label for="formGroupExampleInput2">Specialization:</label>
+    <input type="text" class="form-control" id="formGroupExampleInput2"> <br>
+    
+    
+    <label for="formGroupExampleInput2">Any Identification(Adhaar Card/DL/Passport):</label>
+    <input type="file" class="form-control" id="formGroupExampleInput2" formControlName="identification"> <br>
+    <p class="text-danger" *ngIf="this.uploaderform.get('identification')?.invalid && (uploaderform.get('identification')?.touched || uploaderform.get('identification')?.dirty )">This field is required</p>
+    
+
+    <button class="btn btn-primary" (click)="uploaderprofile()" [disabled]="uploaderform.invalid">Next Step</button>
+    
+</form>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md">
+<form class="form-group" [formGroup]="subjectform">
+    <label>Subject Name</label>
+    <input type="text" class="form-control" formControlName="name"> <br>
+    <p class="text-danger" *ngIf="this.subjectform.get('name')?.invalid && (subjectform.get('name')?.touched || subjectform.get('name')?.dirty )">This field is required</p>
+    <!-- <ng-select [items]="category" bindLabel="name" bindValue="id"></ng-select> -->
+    <label>Select Category:</label>
+    <select class="form-control">
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+    </select> <br>
+    <label>Select Course:</label>
+    <select class="form-control">
+        <option value="1">course 1</option>
+        <option value="2">course 2</option>
+        <option value="3">course 3</option>
+    </select>
+    <button class="btn btn-primary">Done</button>
+</form>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
