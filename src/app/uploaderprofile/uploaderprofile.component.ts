@@ -4,14 +4,14 @@ import { UploaderprofileService } from '../shared/uploaderprofile/uploaderprofil
 import { UploadnotesService } from '../shared/uploadnotes/uploadnotes.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-uploaderprofile',
   templateUrl: './uploaderprofile.component.html',
   styleUrls: ['./uploaderprofile.component.css']
 })
 export class UploaderprofileComponent implements OnInit {
-  constructor(private uploadernotesservice: UploaderprofileService, private toastr: ToastrService, private router: Router,private uploadnotesservice: UploadnotesService){}
+  constructor(private uploadernotesservice: UploaderprofileService, private toastr: ToastrService, private router: Router,private uploadnotesservice: UploadnotesService, private spinner: NgxSpinnerService){}
 
   uploaderform=new FormGroup({
     'name': new FormControl('',[Validators.required]),
@@ -23,6 +23,11 @@ export class UploaderprofileComponent implements OnInit {
   }
   )
 ngOnInit(): void {
+  this.spinner.show()
+    setTimeout(() => {
+      this.spinner.hide()
+    }, 200);
+
   if(this.uploadernotesservice.getdetails()!= null){
     this.router.navigateByUrl('/layout/subscribe')
     console.log(this.uploadernotesservice.getdetails())

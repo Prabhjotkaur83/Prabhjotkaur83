@@ -36,6 +36,17 @@
   <label for="formGroupExampleInput2">Title: </label>
   <input type="text" class="form-control" id="formGroupExampleInput2" formControlName="title"><br>
   <p class="text-danger" *ngIf="this.uploadnotesform.get('title')?.invalid && (uploadnotesform.get('title')?.touched || uploadnotesform.get('title')?.dirty )">Required (Maximum character length is 50)</p>
+  <label for="formGroupExampleInput2">Subject: </label>
+  <input type="datalist" class="form-control" ><br>
+
+  <label for="formGroupExampleInput2">Course: </label>
+  <input type="text" class="form-control" ><br>
+
+  <label for="formGroupExampleInput2">Semester: </label>
+  <input type="text" class="form-control" ><br>
+
+  <!-- <p class="text-danger" *ngIf="this.uploadnotesform.get('title')?.invalid && (uploadnotesform.get('title')?.touched || uploadnotesform.get('title')?.dirty )">Required (Maximum character length is 50)</p> -->
+
   <label for="formGroupExampleInput2">Description: </label>
   
    <textarea type="text" class="form-control" id="formGroupExampleInput2" maxlength="600" placeholder="maximum length is 600 words including spaces" formControlName="description"></textarea> <br>

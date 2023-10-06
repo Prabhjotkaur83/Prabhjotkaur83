@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-editprofile',
@@ -7,6 +8,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent {
+  constructor(private spinner: NgxSpinnerService){}
+  ngOnInit(): void {
+    this.spinner.show()
+    setTimeout(() => {
+      this.spinner.hide()
+    }, 200);
+}
+
   UserEditForm=new FormGroup({
     'name': new FormControl('',[Validators.required]),
     'email': new FormControl('',[Validators.required,Validators.email]),

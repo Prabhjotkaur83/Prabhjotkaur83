@@ -1,46 +1,66 @@
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://i.pinimg.com/originals/ed/b8/b3/edb8b3da20cdc65f496b6b4dc3fe463d.gif' />">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-   img{
-    height: 200px;
-    
-   }
-  </style>
+
   <title>Dashboard</title>
 </head>
 <body>
   <div class="container-fluid">
-    <div class="card-deck">
-      <div class="card custom-block custom-block-overlay">
-        <img class="card-img-top" src="../../assets/images/digitalnotesproduct1.jpeg" alt="Card image cap">
-        <div class="card-body">
-          <a href=""><h5 class="card-title">Course 1</h5></a>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
-        </div>
-      </div>
-      
-      <div class="card">
+
+    <div class="row upper">
+      <div class="card col-md-5 ">
         <img class="card-img-top" src="../../assets/images/digitalnotesproduct2.jpeg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Course 2</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <a routerLink="/admin/adminviewcategory"><h5 class="card-title">View Categories</h5></a>
+          <p class="card-text">View all categories of notes!</p>
           <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
         </div>
+     
       </div>
-      <div class="card">
-        <img class="card-img-top" src="../../assets/images/digitalnotescover.jpeg" alt="Card image cap">
+      
+      <div class="card col-md-5">
+        <img class="card-img-top" src="../../assets/images/digitalnotesproduct2.jpeg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Course 3</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <a routerLink="/admin/viewstudent"><h5 class="card-title">View Students</h5></a>
+          <p class="card-text">View students who are part of our family!</p>
           <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
         </div>
+      
+    </div>
+  </div>
+   <div class="row upper">
+      <div class="card col-md-5 ">
+        <img class="card-img-top" src="../../assets/images/digitalnotesproduct2.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <a routerLink="/admin/viewnotes"><h5 class="card-title">View Notes</h5></a>
+          <p class="card-text">View all the notes available</p>
+          <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
+        </div>
+      
+    </div>
+  
+      <div class="card col-md-5">
+        <img class="card-img-top" src="../../assets/images/digitalnotesproduct2.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <a routerLink="/admin/handlerequest"><h5 class="card-title">Handle Requests</h5></a>
+          <p class="card-text">Use this to handle the incoming requests before timer expires!</p>
+          <p class="card-text"><small class="text-muted">Last updated: 3 mins ago</small></p>
+        </div>
+    
       </div>
-    </div>
-    </div>
+      </div>
+
+    
+  </div>
+ 
+
 </body>
 </html>

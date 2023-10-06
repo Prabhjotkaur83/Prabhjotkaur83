@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-handle-requests',
@@ -7,6 +9,14 @@ import Swal from 'sweetalert2';
   styleUrls: ['./handle-requests.component.css']
 })
 export class HandleRequestsComponent {
+  constructor(private spinner: NgxSpinnerService){}
+  ngOnInit(): void {
+    this.spinner.show()
+    setTimeout(() => {
+      this.spinner.hide()
+    }, 200);
+}
+
   decline(){
     Swal.fire({
       title: 'Are you sure you want to decline?',

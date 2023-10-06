@@ -28,7 +28,7 @@
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/bootstrap-icons.css",
-              "src/assets/css/owl.carousel.min.css",
+              // "src/assets/css/owl.carousel.min.css",
               "src/assets/css/owl.theme.default.min.css",
               "src/assets/css/templatemo-pod-talk.css",
               "node_modules/ngx-toastr/toastr.css"
